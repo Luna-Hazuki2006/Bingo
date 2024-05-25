@@ -1,4 +1,7 @@
 let tablero = document.getElementById("tablero")
+let tablitas = document.getElementById('tablitas')
+let cantidad = 5
+let letras = ['B', 'I', 'N', 'G', 'O']
 let numeros = []
 
 function llenar() {
@@ -15,7 +18,6 @@ function llenar() {
         columna.push(i)
     }
     let tr = document.createElement('tr')
-    let letras = ['B', 'I', 'N', 'G', 'O']
     for (const letra of letras) {
         let th = document.createElement('th')
         th.innerText = letra
@@ -35,4 +37,24 @@ function llenar() {
     console.log(numeros);
 }
 
+function crear() {
+    for (let i = 0; i < cantidad; i++) {
+        let tabla = document.createElement('table')
+        let tr = document.createElement('tr')
+        for (const letra of letras) {
+            let th = document.createElement('th')
+            th.innerText = letra
+            tr.appendChild(th)
+        }
+        tabla.appendChild(tr)
+        let resto = []
+        for (let i = 0; i < 5; i++) {
+            tr = document.createElement('tr')
+            
+        }
+        tablitas.appendChild(tabla)
+    }
+}
+
 llenar()
+crear()
