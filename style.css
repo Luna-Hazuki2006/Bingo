@@ -14,3 +14,7 @@ table, th, td {
 th, td {
     text-align: center;
 }
+
+.vencedor {
+    background-color: green;
+}
