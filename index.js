@@ -84,7 +84,13 @@ function buscar() {
         encontrar = Math.floor(Math.random() * nuevo.length)
     }
     let perfecto = nuevo[encontrar].innerText
-    informacion.innerText = 'El número elegido es: ' + perfecto
+    let valor = ""
+    for (let i = 0; i < letras.length; i++) {
+        if (numeros[i].find(x => x == perfecto)) {
+            valor = letras[i] + perfecto
+        }
+    }
+    informacion.innerText = 'El número elegido es: ' + valor
     nuevo[encontrar].innerText = marca
     for (const este of tablitas.children) {
         for (const esto of este.getElementsByTagName('td')) {
