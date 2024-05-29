@@ -9,9 +9,15 @@
 </head>
 <body>
     <h1>Bingo :D</h1>
+    <form>
+        <label for="valores">Ingrese la cantidad de cartones: </label>
+        <input type="number" name="valores" id="valores" min="1" step="1" value="1" required>
+        <button type="button" onclick="cambiar();">Crear</button>
+    </form>
+    <button id="reiniciar" type="button" onclick="llenar();">Reiniciar</button>
     <table id="tablero"></table>
     <p id="aleatorio">Aún no has sacado un número</p>
-    <button id="buscar" type="button" onclick="buscar();">Sacar número 🎡</button>
+    <button id="buscar" type="button" onclick="buscar();" disabled>Sacar número 🎡</button>
     <section id="tablitas"></section>
 </body>
 </html>

@@ -8,8 +8,22 @@ let aleatorio = 0
 let buscados = []
 let marca = '✨'
 
+function cambiar() {
+    let valores = document.getElementById('valores')
+    cantidad = valores.value
+    if (cantidad != '' && cantidad > 0) {
+        llenar()
+    }
+    
+}
+
 function llenar() {
+    tablero.innerHTML = ''
     let columna = []
+    aleatorio = 0
+    numeros = []
+    let boton = document.getElementById('buscar')
+    boton.removeAttribute('disabled')
     for (let i = 1; i <= 75; i++) {
         if (i == 1) {
             columna = []
@@ -39,9 +53,13 @@ function llenar() {
     }
     tablero.appendChild(tr)
     console.log(numeros);
+    crear()
 }
 
 function crear() {
+    buscados = []
+    tablitas.innerHTML = ''
+    informacion.innerText = 'Aún no has sacado un número'
     for (let i = 0; i < cantidad; i++) {
         let tabla = document.createElement('table')
         tabla.id = i
@@ -141,4 +159,3 @@ function revisar(carton = document.createElement('table')) {
 }
 
 llenar()
-crear()
