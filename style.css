@@ -18,3 +18,7 @@ th, td {
 .vencedor {
     background-color: green;
 }
+
+.central {
+    text-align: center;
+}
